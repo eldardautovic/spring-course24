@@ -1,79 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>BEST Mostar | Spring Course 2024`</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        font-family: sans-serif;
-        background-color: rgb(246, 206, 206);
-      }
-
-      #countdown-container {
-        text-align: center;
-      }
-
-      #countdown {
-        font-size: 36px;
-        font-weight: bold;
-        padding-bottom: 20px;
-      }
-
-      #title {
-        font-size: 3rem;
-        font-weight: bold;
-        padding-bottom: 20px;
-      }
-
-      #subtitle {
-        font-size: 18px;
-        font-family: "Courier New", Courier, monospace;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEST Mostar</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <div id="countdown-container">
-      <div id="title">Code Quest: Mastering Game Realms</div>
-      <div id="countdown">00m 00d 00h 00m 00s</div>
-      <div id="subtitle">13.5. Arrival day - 22.5. Departure day</div>
+    <div class="navbar">
+      <img class="logo" src="logo.png" alt="Logo" />
+      <ul>
+        <li><a href="#goto">HOME</a></li>
+        <li><a href="#goto">APPLY</a></li>
+        <li><a href="#goto3">COURSE</a></li>
+        <li><a href="#goto4">CITY</a></li>
+        <li><a href="#goto5">BEST</a></li>
+      </ul>
     </div>
+    <div data-aos="fade-up" data-aos-anchor-placement="top-center" id="home">
+      <h1 id="goto" class="courseName">
+        Code Quest: <br />Mastering Game Realms
+      </h1>
+      <button class="button-54" role="button">APPLY SOON</button>
+      <h1 id="courseCD" class="courseName">COURSE STARTING IN:</h1>
+    </div>
+    <div id="countdown"></div>
+    <div id="goto3" id="shape1" class="shapedDiv">
+      <div id="aboutTheCourse">
+        <h1>About the course</h1>
+        <p id="paragraf">
+          Exciting news for gaming enthusiasts! Mostar is set to host a game
+          development course, promising an immersive learning experience in the
+          heart of this culturally rich city. Led by industry experts, the
+          course will delve into various aspects of game design, programming,
+          and animation, providing participants with hands-on training using
+          state-of-the-art software and tools. From exploring the fundamentals
+          of game mechanics to understanding the latest trends in the gaming
+          industry, this course in Mostar is a golden opportunity for aspiring
+          game developers to hone their skills and bring their creative visions
+          to life in a vibrant and inspiring setting.
+        </p>
+      </div>
+      <img id="s1photo" src="assets/course.JPG" />
+    </div>
+    <div id="goto4" id="shape1" class="shapedDiv2">
+      <div id="aboutTheCourse">
+        <h1>Mostar, Bosnia and Herzegovina</h1>
+        <p id="paragraf">
+          Mostar is a charming city in southern Bosnia and Herzegovina, famous
+          for its stunning Old Bridge, known as Stari Most. The bridge is a
+          symbol of the city's resilience and has become a significant tourist
+          attraction, drawing visitors from around the world. The old town area
+          around the bridge is also well-preserved and offers a glimpse into
+          Mostar's historical and cultural significance. The city's old town is
+          a delightful mix of Ottoman and Austro-Hungarian architecture,
+          creating a unique atmosphere. You can explore the historic streets,
+          visit the local bazaar for traditional crafts, and enjoy the peaceful
+          Neretva River, which flows through the heart of the city. Mostar's
+          rich cultural heritage and warm hospitality make it a must-visit
+          destination for any traveler.
+        </p>
+      </div>
+      <img id="s2photo" src="assets/mostar.jpg" />
+    </div>
+    <div id="shape1" class="shapedDiv">
+      <img id="s1photo" src="assets/DLP_2633.jpg" />
 
-    <script>
-      function updateCountdown() {
-        const targetDate = new Date("2024-05-13T00:00:00"); // May 13, 2023
-        const currentDate = new Date();
+      <div id="goto5" id="aboutTheCourse">
+        <h1 id="aboutBestHeader">About BEST</h1>
+        <p id="paragraf">
+          BEST (Board of European Students of Technology) is a non-profit and
+          non-political student organization. BEST aims to provide
+          communication, cooperation, and exchange opportunities among European
+          students of technology, thereby fostering international understanding
+          and personal development. The organization offers a range of services,
+          including academic courses, career support, and cultural exchange
+          programs. One of its most popular activities is the organization of
+          international engineering competitions, where students from different
+          countries collaborate and compete in various technical challenges.
+          Additionally, BEST organizes workshops, seminars, and other events
+          that promote personal development and encourage the acquisition of new
+          skills and knowledge.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <b>Board of European Students of Technology</b> <br />
+      Made by ITD
+    </footer>
 
-        const timeDifference = targetDate - currentDate;
-
-        if (timeDifference <= 0) {
-          document.getElementById("countdown").innerHTML = "Time's up!";
-        } else {
-          const months = Math.floor(
-            timeDifference / (1000 * 60 * 60 * 24 * 30)
-          );
-          const days = Math.floor(
-            (timeDifference % (1000 * 60 * 60 * 24 * 30)) /
-              (1000 * 60 * 60 * 24)
-          );
-          const hours = Math.floor(
-            (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-
-          const countdownString = `${months}m ${days}d ${hours}h`;
-          document.getElementById("countdown").innerHTML = countdownString;
-        }
-      }
-
-      // Update the countdown every second
-      setInterval(updateCountdown, 1000);
-
-      // Initial call to set the countdown
-      updateCountdown();
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
